@@ -1,0 +1,18 @@
+.logo{
+    height: 113px;
+    width: 1620px;
+    padding: 60px 60px 0px;
+    /* margin: 610px; */
+}
+
+.logo img{
+    height: 54px;
+    width: 220px;
+    position: relative;
+}
+
+.slider{
+    padding: 60px 60px 0px;
+    margin-left:60px;
+    margin-right:60px;
+}
