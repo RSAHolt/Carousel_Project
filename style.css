@@ -1,13 +1,13 @@
 .logo{
     height: 113px;
-    width: 1620px;
+    width: 100%;
     padding: 60px 60px 0px;
     /* margin: 610px; */
 }
 
 .logo img{
     height: 54px;
-    width: 220px;
+    width: 20%;
     position: relative;
 }
 
