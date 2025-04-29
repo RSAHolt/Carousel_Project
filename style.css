@@ -3,70 +3,137 @@
     padding: 0;
     box-sizing: border-box;
   }
-.alles{
-    margin: 100px 100px 0px;
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .alles {
+    margin: 100px auto 0;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin-bottom: 2rem;
+  }
+  
+  /* Logo styling */
+  .logo img {
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  /* Hamburger menu */
+  .menu {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    
-}
-.logo {
-    height: 113px;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .menu img.toggle {
+    width: 28px;
+    height: auto;
+  }
+  
+  /* Slider */
+  .slider {
+    position: relative;
     width: 100%;
     max-width: 800px;
-}
-
-.logo img {
-    height: 54px;
-    width: 20%;
-    position: relative;
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Optional: controls max width */
     overflow: hidden;
-    
-}
-
-.slides {
+  }
+  
+  .slides {
     display: flex;
     width: 100%;
     height: 300px;
     transition: transform 0.5s ease-in-out;
-}
-
-.item {
-    flex: 0 0 100%; 
-    height: 100%;
+  }
+  
+  .item {
     position: relative;
+    flex: 0 0 100%;
+    height: 100%;
     overflow: hidden;
-}
 
-
-.item img {
+  }
+  
+  .description {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 40%; 
+    height: 3.5em; 
+    background-color: #244AC2;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    overflow: hidden;
+    display: flex;
+    line-height: 1.4;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+    opacity: 0;
+    opacity: 0;
+    transform: translate(-30px, -50%);
+    transition: all 1.6s ease-in;
+  }
+  .description.active {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+  
+  
+  .item img {
     width: 100%;
     height: 100%;
-    object-fit:fill;
-    display: block;
-}
-
-/* Optional nav button styles */
-#prev, #next {
+    object-fit: cover;
+  }
+  
+  /* Navigation arrows */
+  #prev,
+  #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
-    background: rgba(0, 0, 0, 0.4);
+    background: transparent;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 2;
-}
-
-#prev {
+  }
+  
+  #prev {
     left: 10px;
-}
-#next {
+  }
+  #next {
     right: 10px;
-}
+  }
+  .slide-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 3;
+  }
+
+  .slide-indicator span {
+    font-weight: bold;
+  }
+  
